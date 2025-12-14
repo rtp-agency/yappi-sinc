@@ -9,7 +9,7 @@ from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.storage.memory import MemoryStorage
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove, FSInputFile
 from dotenv import load_dotenv
 
 # Загружаем переменные из .env
@@ -435,11 +435,11 @@ async def run_comfyui(message: types.Message, state: FSMContext, data: dict):
             
             # Отправляем результат
             if os.path.exists(video_path):
-                with open(video_path, "rb") as f:
-                    await message.answer_video(
-                        f,
-                        caption=f"✅ Готово!\n\n{data['prompt']}\n{data['width']}x{data['height']}"
-                    )
+                video_input = FSInputFile(video_path)
+                await message.answer_video(
+                    video_input,
+                    caption=f"✅ Готово!\n\n{data['prompt']}\n{data['width']}x{data['height']}"
+                )
             else:
                 await message.answer("❌ Файл не найден")
         

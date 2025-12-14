@@ -4,6 +4,7 @@ import aiohttp
 import json
 import uuid
 import glob
+import subprocess
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
@@ -120,6 +121,25 @@ def cleanup_input_dir():
                     pass
     except Exception as e:
         print(f"Ошибка очистки input: {e}")
+
+def extract_first_frame(video_path, output_path):
+    """Извлекает первый кадр из видео и сохраняет как изображение"""
+    try:
+        cmd = [
+            'ffmpeg',
+            '-i', video_path,
+            '-vframes', '1',
+            '-f', 'image2',
+            '-y',
+            output_path
+        ]
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode != 0:
+            raise Exception(f"FFmpeg error: {result.stderr}")
+        return True
+    except Exception as e:
+        print(f"Ошибка извлечения кадра: {e}")
+        return False
 
 # ============== ЗАГРУЗКА ВОРКФЛОУ ==============
 def load_workflow(workflow_type):
@@ -340,11 +360,23 @@ async def handle_video(message: types.Message, state: FSMContext):
     
     video = message.video
     file = await bot.get_file(video.file_id)
-    media_filename = f"input_{uuid.uuid4().hex}.mp4"
-    media_path = os.path.join(INPUT_DIR, media_filename)
-    await bot.download_file(file.file_path, media_path)
+    video_filename = f"video_{uuid.uuid4().hex}.mp4"
+    video_path = os.path.join(INPUT_DIR, video_filename)
+    await bot.download_file(file.file_path, video_path)
     
-    await state.update_data(media_filename=media_filename)
+    # Извлекаем первый кадр для LoadImage ноды
+    frame_filename = f"frame_{uuid.uuid4().hex}.jpg"
+    frame_path = os.path.join(INPUT_DIR, frame_filename)
+    
+    await message.answer("🎬 Обрабатываю видео...")
+    
+    if not extract_first_frame(video_path, frame_path):
+        is_busy = False
+        current_user = None
+        await message.answer("❌ Ошибка извлечения кадра из видео")
+        return
+    
+    await state.update_data(media_filename=frame_filename)
     await message.answer("✅ Видео получено!\n\n🎵 Отправьте аудио", reply_markup=get_cancel_keyboard())
     await state.set_state(GenerationStates.waiting_audio)
 

@@ -103,7 +103,7 @@
       "save_metadata": "True",
       "trim_to_audio": "False",
       "pingpong": "False",
-      "save_output": "False",
+      "save_output": "True",
       "images": [
         "309",
         0

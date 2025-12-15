@@ -127,7 +127,7 @@ def load_workflow(workflow_type):
     if workflow_type == "i2v":
         workflow_path = "InfiniteTalk_i2v.json"
     else:  # v2v
-        workflow_path = "workflow_api_converted.json"
+        workflow_path = "wanvideo_InfiniteTalk_videoToVideo.json"
     
     with open(workflow_path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -398,14 +398,14 @@ async def run_comfyui(message: types.Message, state: FSMContext, data: dict):
         
         # Модифицируем воркфлоу в зависимости от типа
         if data["workflow_type"] == "i2v":
-            # i2v воркфлоу (старый формат)
+            # i2v воркфлоу
             workflow["284"]["inputs"]["image"] = data["media_filename"]
             workflow["125"]["inputs"]["audio"] = data["audio_filename"]
             workflow["245"]["inputs"]["value"] = data["width"]
             workflow["246"]["inputs"]["value"] = data["height"]
             workflow["312"]["inputs"]["text"] = data["prompt"]
         else:
-            # v2v воркфлоу (API формат)
+            # v2v воркфлоу (wanvideo_InfiniteTalk_videoToVideo.json)
             # Node 228: VHS_LoadVideo - входное видео
             if "228" in workflow:
                 workflow["228"]["inputs"]["video"] = data["media_filename"]
@@ -414,11 +414,11 @@ async def run_comfyui(message: types.Message, state: FSMContext, data: dict):
             if "125" in workflow:
                 workflow["125"]["inputs"]["audio"] = data["audio_filename"]
             
-            # Node 245: Width
+            # Node 245: Width (INTConstant)
             if "245" in workflow:
                 workflow["245"]["inputs"]["value"] = data["width"]
             
-            # Node 246: Height
+            # Node 246: Height (INTConstant)
             if "246" in workflow:
                 workflow["246"]["inputs"]["value"] = data["height"]
             

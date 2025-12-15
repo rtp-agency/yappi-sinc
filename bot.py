@@ -71,6 +71,7 @@ bot = Bot(token=TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
 is_busy = False
 current_user = None
+current_prompt_id = None  # Для отмены воркфлоу
 
 # ============== КЛАВИАТУРЫ ==============
 def get_workflow_keyboard():
@@ -199,6 +200,49 @@ async def cmd_my_id(message: types.Message):
     """Показать свой ID"""
     await message.answer(f"🆔 Ваш ID: {message.from_user.id}")
 
+@dp.message(Command("cancel"))
+async def cmd_cancel_workflow(message: types.Message):
+    """Отменить текущий запущенный воркфлоу"""
+    global is_busy, current_user, current_prompt_id
+    
+    # Проверка доступа
+    if not check_access(message.from_user.id):
+        return
+    
+    # Проверяем есть ли активный воркфлоу
+    if not is_busy or current_prompt_id is None:
+        await message.answer("ℹ️ Нет активного воркфлоу для отмены")
+        return
+    
+    # Только создатель воркфлоу или админ может отменить
+    if message.from_user.id != current_user and not is_admin(message.from_user.id):
+        await message.answer("❌ Вы можете отменить только свой воркфлоу")
+        return
+    
+    try:
+        # Отправляем запрос на отмену в ComfyUI
+        async with aiohttp.ClientSession() as session:
+            async with session.post(f"{COMFY_URL}/interrupt") as resp:
+                if resp.status == 200:
+                    await message.answer(
+                        "🛑 Воркфлоу остановлен!\n\n"
+                        "Система освобождена, можете начать новую генерацию."
+                    )
+                    
+                    # Очищаем состояние
+                    cleanup_input_dir()
+                    is_busy = False
+                    current_user = None
+                    current_prompt_id = None
+                else:
+                    await message.answer("⚠️ Не удалось остановить воркфлоу")
+    except Exception as e:
+        await message.answer(f"❌ Ошибка при остановке: {str(e)}")
+        # На всякий случай освобождаем систему
+        is_busy = False
+        current_user = None
+        current_prompt_id = None
+
 # ============== /start ==============
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message, state: FSMContext):
@@ -306,7 +350,7 @@ async def handle_photo(message: types.Message, state: FSMContext):
         return
     
     is_busy = True
-    current_user = message.from_user.username or message.from_user.first_name
+    current_user = message.from_user.id
     
     photo = message.photo[-1]
     file = await bot.get_file(photo.file_id)
@@ -336,7 +380,7 @@ async def handle_video(message: types.Message, state: FSMContext):
         return
     
     is_busy = True
-    current_user = message.from_user.username or message.from_user.first_name
+    current_user = message.from_user.id
     
     video = message.video
     file = await bot.get_file(video.file_id)
@@ -391,7 +435,7 @@ async def handle_prompt(message: types.Message, state: FSMContext):
 
 # ============== ОБРАБОТКА ==============
 async def run_comfyui(message: types.Message, state: FSMContext, data: dict):
-    global is_busy, current_user
+    global is_busy, current_user, current_prompt_id
     
     try:
         workflow = load_workflow(data["workflow_type"])
@@ -436,8 +480,11 @@ async def run_comfyui(message: types.Message, state: FSMContext, data: dict):
                     raise Exception(f"ComfyUI error: {await resp.text()}")
                 result = await resp.json()
                 prompt_id = result["prompt_id"]
+                
+                # Сохраняем prompt_id для возможности отмены
+                current_prompt_id = prompt_id
             
-            await message.answer("⏳ Обработка...")
+            await message.answer("⏳ Обработка...\n\nДля отмены используйте /cancel")
             
             # Ждём результат
             output_files = await wait_for_completion(session, prompt_id)
@@ -475,6 +522,7 @@ async def run_comfyui(message: types.Message, state: FSMContext, data: dict):
         cleanup_input_dir()
         is_busy = False
         current_user = None
+        current_prompt_id = None
         await state.clear()
 
 # ============== ОЖИДАНИЕ ==============

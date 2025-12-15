@@ -4,7 +4,6 @@ import aiohttp
 import json
 import uuid
 import glob
-import subprocess
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
@@ -122,32 +121,13 @@ def cleanup_input_dir():
     except Exception as e:
         print(f"Ошибка очистки input: {e}")
 
-def extract_first_frame(video_path, output_path):
-    """Извлекает первый кадр из видео и сохраняет как изображение"""
-    try:
-        cmd = [
-            'ffmpeg',
-            '-i', video_path,
-            '-vframes', '1',
-            '-f', 'image2',
-            '-y',
-            output_path
-        ]
-        result = subprocess.run(cmd, capture_output=True, text=True)
-        if result.returncode != 0:
-            raise Exception(f"FFmpeg error: {result.stderr}")
-        return True
-    except Exception as e:
-        print(f"Ошибка извлечения кадра: {e}")
-        return False
-
 # ============== ЗАГРУЗКА ВОРКФЛОУ ==============
 def load_workflow(workflow_type):
     """Загружает воркфлоу из JSON файла"""
     if workflow_type == "i2v":
         workflow_path = "InfiniteTalk_i2v.json"
-    else:
-        workflow_path = "infiniteTalk_v2v.json"
+    else:  # v2v
+        workflow_path = "workflow_api.json"
     
     with open(workflow_path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -360,23 +340,11 @@ async def handle_video(message: types.Message, state: FSMContext):
     
     video = message.video
     file = await bot.get_file(video.file_id)
-    video_filename = f"video_{uuid.uuid4().hex}.mp4"
+    video_filename = f"input_{uuid.uuid4().hex}.mp4"
     video_path = os.path.join(INPUT_DIR, video_filename)
     await bot.download_file(file.file_path, video_path)
     
-    # Извлекаем первый кадр для LoadImage ноды
-    frame_filename = f"frame_{uuid.uuid4().hex}.jpg"
-    frame_path = os.path.join(INPUT_DIR, frame_filename)
-    
-    await message.answer("🎬 Обрабатываю видео...")
-    
-    if not extract_first_frame(video_path, frame_path):
-        is_busy = False
-        current_user = None
-        await message.answer("❌ Ошибка извлечения кадра из видео")
-        return
-    
-    await state.update_data(media_filename=frame_filename)
+    await state.update_data(media_filename=video_filename)
     await message.answer("✅ Видео получено!\n\n🎵 Отправьте аудио", reply_markup=get_cancel_keyboard())
     await state.set_state(GenerationStates.waiting_audio)
 
@@ -428,12 +396,45 @@ async def run_comfyui(message: types.Message, state: FSMContext, data: dict):
     try:
         workflow = load_workflow(data["workflow_type"])
         
-        # Модифицируем воркфлоу
-        workflow["284"]["inputs"]["image"] = data["media_filename"]
-        workflow["125"]["inputs"]["audio"] = data["audio_filename"]
-        workflow["245"]["inputs"]["value"] = data["width"]
-        workflow["246"]["inputs"]["value"] = data["height"]
-        workflow["312"]["inputs"]["text"] = data["prompt"]
+        # Модифицируем воркфлоу в зависимости от типа
+        if data["workflow_type"] == "i2v":
+            # i2v воркфлоу (старый)
+            workflow["284"]["inputs"]["image"] = data["media_filename"]
+            workflow["125"]["inputs"]["audio"] = data["audio_filename"]
+            workflow["245"]["inputs"]["value"] = data["width"]
+            workflow["246"]["inputs"]["value"] = data["height"]
+            workflow["312"]["inputs"]["text"] = data["prompt"]
+        else:
+            # v2v воркфлоу (новый workflow_api.json)
+            # Node 228: VHS_LoadVideo - входное видео
+            for node in workflow["nodes"]:
+                if node["id"] == 228 and node["type"] == "VHS_LoadVideo":
+                    node["widgets_values"]["video"] = data["media_filename"]
+                    break
+            
+            # Node 125: LoadAudio - входное аудио  
+            for node in workflow["nodes"]:
+                if node["id"] == 125 and node["type"] == "LoadAudio":
+                    node["widgets_values"][0] = data["audio_filename"]
+                    break
+            
+            # Node 245: Width
+            for node in workflow["nodes"]:
+                if node["id"] == 245 and node["type"] == "INTConstant":
+                    node["widgets_values"][0] = data["width"]
+                    break
+            
+            # Node 246: Height
+            for node in workflow["nodes"]:
+                if node["id"] == 246 and node["type"] == "INTConstant":
+                    node["widgets_values"][0] = data["height"]
+                    break
+            
+            # Node 241: WanVideoTextEncodeCached - промпт (индекс 2)
+            for node in workflow["nodes"]:
+                if node["id"] == 241 and node["type"] == "WanVideoTextEncodeCached":
+                    node["widgets_values"][2] = data["prompt"]
+                    break
         
         client_id = str(uuid.uuid4())
         prompt_data = {"prompt": workflow, "client_id": client_id}

@@ -127,7 +127,7 @@ def load_workflow(workflow_type):
     if workflow_type == "i2v":
         workflow_path = "InfiniteTalk_i2v.json"
     else:  # v2v
-        workflow_path = "workflow_api.json"
+        workflow_path = "workflow_api_converted.json"
     
     with open(workflow_path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -398,43 +398,33 @@ async def run_comfyui(message: types.Message, state: FSMContext, data: dict):
         
         # Модифицируем воркфлоу в зависимости от типа
         if data["workflow_type"] == "i2v":
-            # i2v воркфлоу (старый)
+            # i2v воркфлоу (старый формат)
             workflow["284"]["inputs"]["image"] = data["media_filename"]
             workflow["125"]["inputs"]["audio"] = data["audio_filename"]
             workflow["245"]["inputs"]["value"] = data["width"]
             workflow["246"]["inputs"]["value"] = data["height"]
             workflow["312"]["inputs"]["text"] = data["prompt"]
         else:
-            # v2v воркфлоу (новый workflow_api.json)
+            # v2v воркфлоу (API формат)
             # Node 228: VHS_LoadVideo - входное видео
-            for node in workflow["nodes"]:
-                if node["id"] == 228 and node["type"] == "VHS_LoadVideo":
-                    node["widgets_values"]["video"] = data["media_filename"]
-                    break
+            if "228" in workflow:
+                workflow["228"]["inputs"]["video"] = data["media_filename"]
             
             # Node 125: LoadAudio - входное аудио  
-            for node in workflow["nodes"]:
-                if node["id"] == 125 and node["type"] == "LoadAudio":
-                    node["widgets_values"][0] = data["audio_filename"]
-                    break
+            if "125" in workflow:
+                workflow["125"]["inputs"]["audio"] = data["audio_filename"]
             
             # Node 245: Width
-            for node in workflow["nodes"]:
-                if node["id"] == 245 and node["type"] == "INTConstant":
-                    node["widgets_values"][0] = data["width"]
-                    break
+            if "245" in workflow:
+                workflow["245"]["inputs"]["value"] = data["width"]
             
             # Node 246: Height
-            for node in workflow["nodes"]:
-                if node["id"] == 246 and node["type"] == "INTConstant":
-                    node["widgets_values"][0] = data["height"]
-                    break
+            if "246" in workflow:
+                workflow["246"]["inputs"]["value"] = data["height"]
             
-            # Node 241: WanVideoTextEncodeCached - промпт (индекс 2)
-            for node in workflow["nodes"]:
-                if node["id"] == 241 and node["type"] == "WanVideoTextEncodeCached":
-                    node["widgets_values"][2] = data["prompt"]
-                    break
+            # Node 241: WanVideoTextEncodeCached - промпт
+            if "241" in workflow:
+                workflow["241"]["inputs"]["positive_prompt"] = data["prompt"]
         
         client_id = str(uuid.uuid4())
         prompt_data = {"prompt": workflow, "client_id": client_id}

@@ -36,7 +36,7 @@
   },
   "125": {
     "inputs": {
-      "audio": "ElevenLabs_2025_11_27T21_25_52_Diego_Rodriguez_ivc_sp100_s50_sb75 (1).mp3",
+      "audio": "ElevenLabs_2025_12_22T17_50_23_Zara_–_The_Warm,_Real_World_Conversationalist.mp3",
       "audioUI": ""
     },
     "class_type": "LoadAudio",
@@ -261,7 +261,7 @@
   },
   "228": {
     "inputs": {
-      "video": "3667887_1764277262759386400.mp4",
+      "video": "IMG_9085.mp4",
       "force_rate": 0,
       "custom_width": [
         "245",
@@ -319,7 +319,7 @@
       "pad_color": "0, 0, 0",
       "crop_position": "center",
       "divisible_by": 16,
-      "device": "gpu",
+      "device": "cpu",
       "image": [
         "228",
         0
@@ -380,11 +380,11 @@
     "inputs": {
       "model_name": "umt5-xxl-enc-bf16.safetensors",
       "precision": "bf16",
-      "positive_prompt": "a man is talking",
+      "positive_prompt": "a girl is talking quetly, her face emotions must remain natural. Ultra quality, high resolution, ultra realistic",
       "negative_prompt": "bright tones, overexposed, static, blurred details, subtitles, style, works, paintings, images, static, overall gray, worst quality, low quality, JPEG compression residue, ugly, incomplete, extra fingers, poorly drawn hands, poorly drawn faces, deformed, disfigured, misshapen limbs, fused fingers, still picture, messy background, three legs, many people in the background, walking backwards",
       "quantization": "disabled",
       "use_disk_cache": false,
-      "device": "gpu"
+      "device": "cpu"
     },
     "class_type": "WanVideoTextEncodeCached",
     "_meta": {

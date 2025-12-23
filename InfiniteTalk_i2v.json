@@ -36,7 +36,7 @@
   },
   "125": {
     "inputs": {
-      "audio": "ElevenLabs_2025_11_27T21_25_52_Diego_Rodriguez_ivc_sp100_s50_sb75.mp3",
+      "audio": "ElevenLabs_2025_11_27T21_25_52_Diego_Rodriguez_ivc_sp100_s50_sb75 (1).mp3",
       "audioUI": ""
     },
     "class_type": "LoadAudio",
@@ -46,10 +46,10 @@
   },
   "128": {
     "inputs": {
-      "steps": 4,
+      "steps": 8,
       "cfg": 2,
-      "shift": 11.000000000000002,
-      "seed": 2,
+      "shift": 11,
+      "seed": 522857816303075,
       "force_offload": true,
       "scheduler": "dpm++_sde",
       "riflex_freq_index": 0,
@@ -94,7 +94,7 @@
   },
   "131": {
     "inputs": {
-      "frame_rate": 24,
+      "frame_rate": 25,
       "loop_count": 0,
       "filename_prefix": "WanVideo2_1_InfiniteTalk",
       "format": "video/h264-mp4",
@@ -147,7 +147,7 @@
   "138": {
     "inputs": {
       "lora": "lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors",
-      "strength": 1,
+      "strength": 0.8,
       "low_mem_load": false,
       "merge_loras": false
     },
@@ -235,8 +235,8 @@
   },
   "237": {
     "inputs": {
-      "strength_1": 1,
-      "strength_2": 1,
+      "strength_1": 0.9,
+      "strength_2": 0.9,
       "crop": "center",
       "combine_embeds": "average",
       "force_offload": true,
@@ -298,7 +298,7 @@
       "pad_color": "0, 0, 0",
       "crop_position": "center",
       "divisible_by": 16,
-      "device": "cpu",
+      "device": "gpu",
       "image": [
         "284",
         0
@@ -311,7 +311,7 @@
   },
   "284": {
     "inputs": {
-      "image": "photo_2025-11-19_17-50-30.jpg"
+      "image": "жулик.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -332,8 +332,7 @@
   },
   "293": {
     "inputs": {
-      "preview": "384",
-      "previewMode": null,
+      "preview": "",
       "source": [
         "194",
         2

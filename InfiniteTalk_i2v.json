@@ -298,7 +298,7 @@
       "pad_color": "0, 0, 0",
       "crop_position": "center",
       "divisible_by": 16,
-      "device": "gpu",
+      "device": "cpu",
       "image": [
         "284",
         0

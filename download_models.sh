@@ -1,5 +1,28 @@
 #!/bin/bash
 
+# -------------------------
+# Создание виртуального окружения
+# -------------------------
+VENV_DIR="./venv"
+
+if [ ! -d "$VENV_DIR" ]; then
+    echo ">>> Creating virtual environment..."
+    python3 -m venv "$VENV_DIR"
+fi
+
+echo ">>> Activating virtual environment..."
+# shellcheck disable=SC1091
+source "$VENV_DIR/bin/activate"
+
+# Установка зависимостей
+if [ -f "requirements.txt" ]; then
+    echo ">>> Installing dependencies from requirements.txt..."
+    pip install --upgrade pip
+    pip install -r requirements.txt
+else
+    echo ">>> requirements.txt not found, skipping pip install."
+fi
+
 # Базовая директория моделей
 BASE="/workspace/ComfyUI/models"
 

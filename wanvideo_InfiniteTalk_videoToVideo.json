@@ -250,7 +250,7 @@
         0
       ],
       "audio_1": [
-        "304",
+        "125",
         0
       ]
     },
@@ -470,31 +470,6 @@
     "class_type": "GetImageRangeFromBatch",
     "_meta": {
       "title": "Get Image or Mask Range From Batch"
-    }
-  },
-  "303": {
-    "inputs": {
-      "model_name": "MelBandRoformer_fp16.safetensors"
-    },
-    "class_type": "MelBandRoFormerModelLoader",
-    "_meta": {
-      "title": "Mel-Band RoFormer Model Loader"
-    }
-  },
-  "304": {
-    "inputs": {
-      "model": [
-        "303",
-        0
-      ],
-      "audio": [
-        "125",
-        0
-      ]
-    },
-    "class_type": "MelBandRoFormerSampler",
-    "_meta": {
-      "title": "Mel-Band RoFormer Sampler"
     }
   },
   "306": {

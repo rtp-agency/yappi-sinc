@@ -14,15 +14,17 @@ echo ">>> Activating virtual environment..."
 # shellcheck disable=SC1091
 source "$VENV_DIR/bin/activate"
 
-# Установка зависимостей корневого проекта
+# Установка зависимостей корневого проекта ВНУТРИ окружения
 if [ -f "requirements.txt" ]; then
-    echo ">>> Installing dependencies from requirements.txt..."
+    echo ">>> Installing dependencies from requirements.txt inside venv..."
     pip install --upgrade pip
     pip install -r requirements.txt
-    deactivate
 else
     echo ">>> requirements.txt not found, skipping pip install."
 fi
+
+echo ">>> Deactivating virtual environment..."
+deactivate
 
 # -------------------------
 # Путь к custom_nodes
@@ -46,9 +48,9 @@ clone_and_install() {
         git -C "$target_dir" pull
     fi
 
-    # Install requirements if exist
+    # Установка зависимостей кастомных нод ВНЕ виртуального окружения
     if [ -f "$target_dir/requirements.txt" ]; then
-        echo ">>> Installing node dependencies..."
+        echo ">>> Installing node dependencies (GLOBAL pip)..."
         pip install -r "$target_dir/requirements.txt"
     else
         echo ">>> No requirements.txt found for this node."

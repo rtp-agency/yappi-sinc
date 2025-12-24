@@ -19,6 +19,7 @@ if [ -f "requirements.txt" ]; then
     echo ">>> Installing dependencies from requirements.txt..."
     pip install --upgrade pip
     pip install -r requirements.txt
+    deactivate
 else
     echo ">>> requirements.txt not found, skipping pip install."
 fi

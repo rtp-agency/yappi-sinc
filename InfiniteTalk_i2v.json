@@ -11,11 +11,15 @@
   "122": {
     "inputs": {
       "model": "Wan2_1-I2V-14B-480p_fp8_e5m2_scaled_KJ.safetensors",
-      "base_precision": "bf16",
+      "base_precision": "fp16_fast",
       "quantization": "disabled",
-      "load_device": "main_device",
-      "attention_mode": "flash_attn_3",
+      "load_device": "offload_device",
+      "attention_mode": "sageattn",
       "rms_norm_function": "default",
+      "block_swap_args": [
+        "134",
+        0
+      ],
       "lora": [
         "138",
         0
@@ -32,7 +36,7 @@
   },
   "125": {
     "inputs": {
-      "audio": "test.mp3",
+      "audio": "ElevenLabs_IMG_1889 (online-audio-converter.com).mp3",
       "audioUI": ""
     },
     "class_type": "LoadAudio",
@@ -42,19 +46,19 @@
   },
   "128": {
     "inputs": {
-      "steps": 12,
-      "cfg": 2,
-      "shift": 11,
+      "steps": 4,
+      "cfg": 1.0000000000000002,
+      "shift": 11.000000000000002,
       "seed": 2,
-      "force_offload": "True",
+      "force_offload": true,
       "scheduler": "dpm++_sde",
       "riflex_freq_index": 0,
-      "denoise_strength": 0.4,
-      "batched_cfg": "False",
+      "denoise_strength": 1,
+      "batched_cfg": false,
       "rope_function": "comfy",
       "start_step": 0,
       "end_step": -1,
-      "add_noise_to_samples": "True",
+      "add_noise_to_samples": true,
       "model": [
         "122",
         0
@@ -65,10 +69,6 @@
       ],
       "text_embeds": [
         "314",
-        0
-      ],
-      "cache_args": [
-        "316",
         0
       ],
       "multitalk_embeds": [
@@ -94,16 +94,16 @@
   },
   "131": {
     "inputs": {
-      "frame_rate": 25,
+      "frame_rate": 24,
       "loop_count": 0,
       "filename_prefix": "WanVideo2_1_InfiniteTalk",
       "format": "video/h264-mp4",
       "pix_fmt": "yuv420p",
       "crf": 19,
-      "save_metadata": "True",
-      "trim_to_audio": "False",
-      "pingpong": "False",
-      "save_output": "False",
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": false,
       "images": [
         "309",
         0
@@ -116,6 +116,21 @@
     "class_type": "VHS_VideoCombine",
     "_meta": {
       "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "134": {
+    "inputs": {
+      "blocks_to_swap": 20,
+      "offload_img_emb": false,
+      "offload_txt_emb": false,
+      "use_non_blocking": true,
+      "vace_blocks_to_swap": 0,
+      "prefetch_blocks": 1,
+      "block_swap_debug": false
+    },
+    "class_type": "WanVideoBlockSwap",
+    "_meta": {
+      "title": "WanVideo Block Swap"
     }
   },
   "137": {
@@ -133,8 +148,8 @@
     "inputs": {
       "lora": "lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors",
       "strength": 1,
-      "low_mem_load": "False",
-      "merge_loras": "False"
+      "low_mem_load": false,
+      "merge_loras": false
     },
     "class_type": "WanVideoLoraSelect",
     "_meta": {
@@ -144,14 +159,14 @@
   "177": {
     "inputs": {
       "backend": "inductor",
-      "fullgraph": "False",
-      "mode": "max-autotune",
-      "dynamic": "False",
+      "fullgraph": false,
+      "mode": "default",
+      "dynamic": false,
       "dynamo_cache_size_limit": 64,
-      "compile_transformer_blocks_only": "True",
+      "compile_transformer_blocks_only": true,
       "dynamo_recompile_limit": 128,
-      "force_parameter_static_shapes": "False",
-      "allow_unmerged_lora_compile": "False"
+      "force_parameter_static_shapes": false,
+      "allow_unmerged_lora_compile": false
     },
     "class_type": "WanVideoTorchCompileSettings",
     "_meta": {
@@ -195,7 +210,7 @@
   },
   "194": {
     "inputs": {
-      "normalize_loudness": "True",
+      "normalize_loudness": true,
       "num_frames": [
         "270",
         0
@@ -226,7 +241,7 @@
       "strength_2": 1,
       "crop": "center",
       "combine_embeds": "average",
-      "force_offload": "True",
+      "force_offload": true,
       "tiles": 0,
       "ratio": 0.5,
       "clip_vision": [
@@ -298,7 +313,7 @@
   },
   "284": {
     "inputs": {
-      "image": "test.png"
+      "image": "photo_202asdasdasd5-12-24_12-32-34.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -319,8 +334,8 @@
   },
   "293": {
     "inputs": {
-      "preview": "",
-      "previewMode": null,
+      "preview": "143",
+      "previewMode": false,
       "source": [
         "194",
         2
@@ -392,7 +407,7 @@
   },
   "312": {
     "inputs": {
-      "text": "",
+      "text": "a girl is talking on the video, her face must stay the same as on the photo, do not cover her face with any clothes or other things.",
       "clip": [
         "311",
         0
@@ -439,20 +454,6 @@
     "class_type": "CLIPVisionLoader",
     "_meta": {
       "title": "Загрузить видение CLIP"
-    }
-  },
-  "316": {
-    "inputs": {
-      "rel_l1_thresh": 0.2,
-      "start_step": 1,
-      "end_step": -1,
-      "cache_device": "offload_device",
-      "use_coefficients": true,
-      "mode": "e"
-    },
-    "class_type": "WanVideoTeaCache",
-    "_meta": {
-      "title": "WanVideo TeaCache"
     }
   }
 }

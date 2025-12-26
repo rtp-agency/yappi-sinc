@@ -27,46 +27,6 @@ echo ">>> Deactivating virtual environment..."
 deactivate
 
 # -------------------------
-# Путь к custom_nodes
-# -------------------------
-CUSTOM="/workspace/ComfyUI/custom_nodes"
-
-mkdir -p "$CUSTOM"
-
-clone_and_install() {
-    local repo_url="$1"
-    local target_dir="$CUSTOM/$(basename "$repo_url" .git)"
-
-    echo "==========================================="
-    echo ">>> Installing custom node: $repo_url"
-    echo "==========================================="
-
-    if [ ! -d "$target_dir" ]; then
-        git clone "$repo_url" "$target_dir"
-    else
-        echo ">>> Repo already exists, pulling updates..."
-        git -C "$target_dir" pull
-    fi
-
-    # Установка зависимостей кастомных нод ВНЕ виртуального окружения
-    if [ -f "$target_dir/requirements.txt" ]; then
-        echo ">>> Installing node dependencies (GLOBAL pip)..."
-        pip install -r "$target_dir/requirements.txt"
-    else
-        echo ">>> No requirements.txt found for this node."
-    fi
-}
-
-# -------------------------
-# Установка кастомных нод
-# -------------------------
-
-clone_and_install "https://github.com/kijai/ComfyUI-WanVideoWrapper.git"
-clone_and_install "https://github.com/kijai/ComfyUI-KJNodes.git"
-clone_and_install "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"
-clone_and_install "https://github.com/kijai/ComfyUI-MelBandRoFormer.git"
-
-# -------------------------
 # Базовая директория моделей
 # -------------------------
 BASE="/workspace/ComfyUI/models"

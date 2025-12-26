@@ -49,7 +49,7 @@
       "force_offload": false,
       "scheduler": "unipc",
       "riflex_freq_index": 0,
-      "denoise_strength": 0.33,
+      "denoise_strength": 0.55,
       "batched_cfg": false,
       "rope_function": "comfy",
       "start_step": 0,

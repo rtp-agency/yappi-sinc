@@ -543,7 +543,7 @@ async def run_comfyui(message: types.Message, state: FSMContext, data: dict):
         await state.clear()
 
 # ============== ОЖИДАНИЕ ==============
-async def wait_for_completion(session, prompt_id, max_wait=1800):
+async def wait_for_completion(session, prompt_id, max_wait=7200):
     waited = 0
     while waited < max_wait:
         await asyncio.sleep(5)

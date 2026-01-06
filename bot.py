@@ -493,10 +493,27 @@ async def run_comfyui(message: types.Message, state: FSMContext, data: dict):
             
             # Находим видео
             video_file = None
+            # Сначала ищем по "классическим" видео-расширениям,
+            # при этом стараемся избежать файлов с суффиксом "-audio"
+            # (например, WanVideo2_1_InfiniteTalk_00005-audio.mp4).
+            preferred_exts = ('.mp4', '.avi', '.mov', '.webm')
+            safe_candidates = []
+            ext_candidates = []
             for filename in output_files:
-                if filename.endswith(('.mp4', '.avi', '.mov')):
-                    video_file = filename
-                    break
+                lower_name = filename.lower()
+                if lower_name.endswith(preferred_exts):
+                    ext_candidates.append(filename)
+                    if "-audio" not in lower_name and "audio" not in lower_name:
+                        safe_candidates.append(filename)
+
+            if safe_candidates:
+                video_file = safe_candidates[0]
+            elif ext_candidates:
+                video_file = ext_candidates[0]
+            else:
+                # Фолбэк: берём первый файл из списка, даже если расширение неизвестно,
+                # чтобы не терять результат.
+                video_file = output_files[0]
             
             if not video_file:
                 raise Exception("Видео не найдено")
@@ -543,10 +560,13 @@ async def wait_for_completion(session, prompt_id, max_wait=1800):
                     outputs = prompt_history["outputs"]
                     files = []
                     for node_id, node_output in outputs.items():
+                        # ComfyUI может класть видео как в "videos"/"gifs", так и в "images"
                         if "gifs" in node_output:
                             files.extend([item["filename"] for item in node_output["gifs"]])
                         if "videos" in node_output:
                             files.extend([item["filename"] for item in node_output["videos"]])
+                        if "images" in node_output:
+                            files.extend([item["filename"] for item in node_output["images"]])
                     if files:
                         return files
     return None

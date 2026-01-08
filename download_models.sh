@@ -110,3 +110,78 @@ get "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/sp
     "$BASE/clip_vision"
 
 echo ">>> DONE!"
+
+# Настройка путей
+COMFY_NODES_DIR="/workspace/ComfyUI/custom_nodes"
+mkdir -p "$COMFY_NODES_DIR"
+cd "$COMFY_NODES_DIR"
+
+echo "==============================================="
+echo "STARTING CUSTOM NODES INSTALLATION TEST"
+echo "==============================================="
+
+# Список репозиториев
+REPOS=(
+    "https://github.com/Kijai/ComfyUI-WanVideoWrapper.git"
+    "https://github.com/Kijai/ComfyUI-KJNodes.git"
+    "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"
+    "https://github.com/Kijai/ComfyUI-MelBandRoFormer.git"
+    "https://github.com/ltdrdata/ComfyUI-Manager.git"
+)
+
+# 1. Клонирование репозиториев
+for repo in "${REPOS[@]}"; do
+    folder=$(basename "$repo" .git)
+    if [ ! -d "$folder" ]; then
+        echo ">>> Cloning $folder..."
+        git clone "$repo"
+    else
+        echo ">>> $folder already exists, pulling updates..."
+        cd "$folder" && git pull && cd ..
+    fi
+done
+
+echo "-----------------------------------------------"
+echo "INSTALLING DEPENDENCIES"
+echo "-----------------------------------------------"
+
+# Обновляем pip перед установкой
+pip install --upgrade pip setuptools wheel
+
+# 2. Установка зависимостей для каждой ноды по отдельности
+# Мы используем цикл, чтобы видеть, на какой именно ноде возникнет ошибка
+for repo in "${REPOS[@]}"; do
+    folder=$(basename "$repo" .git)
+    if [ -f "$folder/requirements.txt" ]; then
+        echo ">>> Installing requirements for: $folder"
+        # Используем --user или прямой pip в зависимости от среды Vast
+        pip install --no-cache-dir -r "$folder/requirements.txt"
+        
+        if [ $? -eq 0 ]; then
+            echo " [OK] $folder dependencies installed."
+        else
+            echo " [ERROR] Failed to install dependencies for $folder"
+        fi
+    else
+        echo ">>> No requirements.txt in $folder, skipping."
+    fi
+done
+
+echo "==============================================="
+echo "INSTALLATION TEST FINISHED"
+echo "Restart ComfyUI now to check for red nodes."
+echo "==============================================="
+
+# Находим ID процесса ComfyUI и убиваем его
+PID=$(pgrep -f "python3 main.py")
+if [ ! -z "$PID" ]; then
+    echo ">>> Остановка ComfyUI (PID: $PID)..."
+    kill $PID
+    sleep 2
+fi
+
+# Запускаем заново в фоновом режиме, как это делает Vast
+echo ">>> Запуск ComfyUI..."
+cd /workspace/ComfyUI
+nohup python3 main.py --listen 0.0.0.0 --port 8188 > comfy.log 2>&1 &
+echo ">>> ComfyUI перезапущен!"

@@ -1,30 +1,29 @@
 #!/bin/bash
+# 1. Устанавливаем абсолютный путь к папке проекта
+PROJECT_DIR="/workspace/yappi-sinc"
+cd "$PROJECT_DIR" || { echo "Ошибка: папка $PROJECT_DIR не найдена"; exit 1; }
 
-# -------------------------
-# Создание виртуального окружения
-# -------------------------
-VENV_DIR="./venv"
+# 2. Создание виртуального окружения прямо в папке проекта
+VENV_DIR="$PROJECT_DIR/venv"
 
 if [ ! -d "$VENV_DIR" ]; then
-    echo ">>> Creating virtual environment..."
+    echo ">>> Creating virtual environment in $VENV_DIR..."
     python3 -m venv "$VENV_DIR"
 fi
 
+# 3. Активация и установка зависимостей
 echo ">>> Activating virtual environment..."
-# shellcheck disable=SC1091
 source "$VENV_DIR/bin/activate"
 
-# Установка зависимостей корневого проекта ВНУТРИ окружения
 if [ -f "requirements.txt" ]; then
-    echo ">>> Installing dependencies from requirements.txt inside venv..."
+    echo ">>> Installing dependencies from $PROJECT_DIR/requirements.txt..."
     pip install --upgrade pip
-    pip install -r requirements.txt
+    pip install --no-cache-dir -r requirements.txt
 else
-    echo ">>> requirements.txt not found, skipping pip install."
+    echo ">>> requirements.txt not found in $PROJECT_DIR, skipping."
 fi
 
-echo ">>> Deactivating virtual environment..."
-deactivate
+echo ">>> Dependencies installed successfully."
 
 # -------------------------
 # Базовая директория моделей

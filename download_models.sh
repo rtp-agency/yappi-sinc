@@ -185,3 +185,37 @@ echo ">>> Запуск ComfyUI..."
 cd /workspace/ComfyUI
 nohup python3 main.py --listen 0.0.0.0 --port 8188 > comfy.log 2>&1 &
 echo ">>> ComfyUI перезапущен!"
+
+# 1. Скачивание .env в папку бота
+echo ">>> Downloading .env file..."
+mkdir -p /workspace/yappi-sinc
+curl -L "https://www.dropbox.com/scl/fi/oc46q1jah59zn6dk8i3k5/.env?rlkey=mbdm7c2yja7vcmjqisg4phxd3&st=r5lu9mld&dl=1" -o /workspace/yappi-sinc/.env
+
+# 2. Запуск бота из виртуального окружения (текущий сеанс)
+echo ">>> Starting Telegram Bot..."
+cd /workspace/yappi-sinc
+# Используем полный путь к venv, созданному в начале скрипта
+./venv/bin/python3 bot.py > bot.log 2>&1 &
+
+# 3. Модификация системного entrypoint.sh для автозапуска при рестарте инстанса
+echo ">>> Patching entrypoint.sh for persistent bot autostart..."
+ENTRYPOINT="/opt/instance-tools/bin/entrypoint.sh"
+
+# Создаем временный файл с кодом вставки
+cat << 'EOF' > /tmp/bot_start.sh
+set -e
+if [[ -f /workspace/yappi-sinc/bot.py ]]; then
+    echo "[entrypoint] starting telegram bot in background"
+    cd /workspace/yappi-sinc
+    source venv/bin/activate
+    nohup python bot.py > bot.log 2>&1 &
+fi
+EOF
+
+# Вставляем содержимое после первой строки (shebang)
+sed -i '2r /tmp/bot_start.sh' "$ENTRYPOINT"
+rm /tmp/bot_start.sh
+
+echo "==============================================="
+echo " ALL SYSTEMS READY AND PATCHED"
+echo "==============================================="

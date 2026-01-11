@@ -148,15 +148,11 @@ echo "-----------------------------------------------"
 # Обновляем pip перед установкой
 pip install --upgrade pip setuptools wheel
 
-# 2. Установка зависимостей для каждой ноды по отдельности
-# Мы используем цикл, чтобы видеть, на какой именно ноде возникнет ошибка
-for repo in "${REPOS[@]}"; do
-    folder=$(basename "$repo" .git)
+# Внутри download_models.sh вместо обычного pip install:
+MAIN_PIP="/venv/main/bin/pip"
+for folder in /workspace/ComfyUI/custom_nodes/*; do
     if [ -f "$folder/requirements.txt" ]; then
-        echo ">>> Installing requirements for: $folder"
-        # Используем --user или прямой pip в зависимости от среды Vast
-        pip install --no-cache-dir -r "$folder/requirements.txt"
-        
+        $MAIN_PIP install --no-cache-dir -r "$folder/requirements.txt" --no-build-isolation
         if [ $? -eq 0 ]; then
             echo " [OK] $folder dependencies installed."
         else

@@ -19,11 +19,12 @@ if [ -f "requirements.txt" ]; then
     echo ">>> Installing dependencies from $PROJECT_DIR/requirements.txt..."
     pip install --upgrade pip
     pip install --no-cache-dir -r requirements.txt
+    deactivate
 else
     echo ">>> requirements.txt not found in $PROJECT_DIR, skipping."
 fi
 
-echo ">>> Dependencies installed successfully."
+echo ">>> Dependencies installed successfully. Venv deactivated"
 
 # -------------------------
 # Базовая директория моделей

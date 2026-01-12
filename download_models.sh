@@ -3,6 +3,13 @@
 PROJECT_DIR="/workspace/yappi-sinc"
 cd "$PROJECT_DIR" || { echo "Ошибка: папка $PROJECT_DIR не найдена"; exit 1; }
 
+# Сначала чиним путь к ComfyUI (КРИТИЧНО для Vast.ai)
+if [ ! -f "/workspace/ComfyUI/main.py" ]; then
+    echo "[Fix] ComfyUI missing in workspace. Linking..."
+    rm -rf /workspace/ComfyUI
+    ln -s /opt/workspace-internal/ComfyUI /workspace/ComfyUI
+fi
+
 # 2. Создание виртуального окружения прямо в папке проекта
 VENV_DIR="$PROJECT_DIR/venv"
 

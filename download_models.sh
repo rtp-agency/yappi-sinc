@@ -175,44 +175,6 @@ echo "INSTALLATION TEST FINISHED"
 echo "Restart ComfyUI now to check for red nodes."
 echo "==============================================="
 
-# # -----------------------------------------------
-# # ГАРАНТИРОВАННЫЙ ПЕРЕЗАПУСК COMFYUI
-# # -----------------------------------------------
-# echo "==============================================="
-# echo " RESTARTING COMFYUI"
-# echo "==============================================="
-
-# # 1. Находим PID процесса ComfyUI (ищем main.py)
-# PID=$(pgrep -f "python3 main.py" || pgrep -f "python main.py")
-
-# if [ ! -z "$PID" ]; then
-#     echo ">>> Found ComfyUI process (PID: $PID). Terminating..."
-#     kill -9 $PID
-#     sleep 3
-# else
-#     echo ">>> ComfyUI process not found. Starting fresh..."
-# fi
-
-# # 2. Запуск ComfyUI вручную в фоновом режиме
-# # Используем nohup, чтобы процесс не умер после закрытия скрипта
-# echo ">>> Launching ComfyUI in background..."
-# cd /workspace/ComfyUI
-# nohup python3 main.py --listen 0.0.0.0 --port 8188 > /workspace/comfy_restart.log 2>&1 &
-
-# # 3. Проверка запуска
-# sleep 5
-# NEW_PID=$(pgrep -f "python3 main.py")
-# if [ ! -z "$NEW_PID" ]; then
-#     echo " [OK] ComfyUI is running now with PID: $NEW_PID"
-# else
-#     echo " [ERROR] ComfyUI failed to start. Check /workspace/comfy_restart.log"
-# fi
-
-# 1. Скачивание .env в папку бота
-echo ">>> Downloading .env file..."
-mkdir -p /workspace/yappi-sinc
-curl -L "https://www.dropbox.com/scl/fi/oc46q1jah59zn6dk8i3k5/.env?rlkey=mbdm7c2yja7vcmjqisg4phxd3&st=r5lu9mld&dl=1" -o /workspace/yappi-sinc/.env
-
 # -------------------------
 # TELEGRAM BOT API LOCAL SERVER
 # -------------------------
@@ -230,6 +192,7 @@ if [ ! -f "/workspace/yappi-sinc/telegram-bot-api/build/telegram-bot-api" ]; the
     exit 1
 fi
 
+chmod +x /workspace/yappi-sinc/telegram-bot-api/build/telegram-bot-api
 # Запускаем сервер
 echo ">>> Starting Telegram Bot API Server on port 8765..."
 cd /workspace/yappi-sinc/telegram-bot-api/build

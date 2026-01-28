@@ -1,0 +1,1802 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Linux - 5.15.0-161-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /workspace/telegram-bot-api/build/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-vXVmQI"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-vXVmQI"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-vXVmQI'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8dc76/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8dc76.dir/build.make CMakeFiles/cmTC_8dc76.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-vXVmQI'
+        Building CXX object CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8dc76.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_8dc76.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccDbRo1M.s
+        GNU C++17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/13"
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/include/c++/13
+         /usr/include/x86_64-linux-gnu/c++/13
+         /usr/include/c++/13/backward
+         /usr/lib/gcc/x86_64-linux-gnu/13/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: c81c05345ce537099dafd5580045814a
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8dc76.dir/'
+         as -v --64 -o CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccDbRo1M.s
+        GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_8dc76
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8dc76.dir/link.txt --verbose=1
+        /usr/bin/c++  -v CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8dc76 
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8dc76' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_8dc76.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuCuUa1.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_8dc76 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8dc76' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_8dc76.'
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-vXVmQI'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/include/c++/13]
+          add: [/usr/include/x86_64-linux-gnu/c++/13]
+          add: [/usr/include/c++/13/backward]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/include/c++/13] ==> [/usr/include/c++/13]
+        collapse include dir [/usr/include/x86_64-linux-gnu/c++/13] ==> [/usr/include/x86_64-linux-gnu/c++/13]
+        collapse include dir [/usr/include/c++/13/backward] ==> [/usr/include/c++/13/backward]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/13;/usr/include/x86_64-linux-gnu/c++/13;/usr/include/c++/13/backward;/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-vXVmQI']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8dc76/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_8dc76.dir/build.make CMakeFiles/cmTC_8dc76.dir/build]
+        ignore line: [gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-vXVmQI']
+        ignore line: [Building CXX object CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8dc76.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_8dc76.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccDbRo1M.s]
+        ignore line: [GNU C++17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/13"]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/include/c++/13]
+        ignore line: [ /usr/include/x86_64-linux-gnu/c++/13]
+        ignore line: [ /usr/include/c++/13/backward]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: c81c05345ce537099dafd5580045814a]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8dc76.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccDbRo1M.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_8dc76]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8dc76.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8dc76 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8dc76' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_8dc76.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuCuUa1.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_8dc76 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccuCuUa1.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_8dc76] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
+          arg [CMakeFiles/cmTC_8dc76.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13] ==> [/usr/lib/gcc/x86_64-linux-gnu/13]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "td/CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /workspace/telegram-bot-api/build/CMakeFiles/3.28.3/CompilerIdC/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "td/CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-uOIaSU"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-uOIaSU"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-uOIaSU'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c57f0/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c57f0.dir/build.make CMakeFiles/cmTC_c57f0.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-uOIaSU'
+        Building C object CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c57f0.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_c57f0.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc3lY4wp.s
+        GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-linux-gnu/13/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 38987c28e967c64056a6454abdef726e
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c57f0.dir/'
+         as -v --64 -o CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o /tmp/cc3lY4wp.s
+        GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_c57f0
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c57f0.dir/link.txt --verbose=1
+        /usr/bin/cc  -v CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o -o cmTC_c57f0 
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c57f0' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c57f0.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYj6PPk.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_c57f0 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c57f0' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c57f0.'
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-uOIaSU'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "td/CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "td/CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-uOIaSU']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c57f0/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_c57f0.dir/build.make CMakeFiles/cmTC_c57f0.dir/build]
+        ignore line: [gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-uOIaSU']
+        ignore line: [Building C object CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c57f0.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_c57f0.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc3lY4wp.s]
+        ignore line: [GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 38987c28e967c64056a6454abdef726e]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c57f0.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o /tmp/cc3lY4wp.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_c57f0]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c57f0.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o -o cmTC_c57f0 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c57f0' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c57f0.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYj6PPk.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_c57f0 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccYj6PPk.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_c57f0] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
+          arg [CMakeFiles/cmTC_c57f0.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13] ==> [/usr/lib/gcc/x86_64-linux-gnu/13]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "td/CMakeLists.txt:106 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-VIJrDP"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-VIJrDP"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-VIJrDP'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_960f2/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_960f2.dir/build.make CMakeFiles/cmTC_960f2.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-VIJrDP'
+        Building C object CMakeFiles/cmTC_960f2.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_960f2.dir/src.c.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-VIJrDP/src.c
+        Linking C executable cmTC_960f2
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_960f2.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_960f2.dir/src.c.o -o cmTC_960f2 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-VIJrDP'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:37 (check_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_STD17"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ch82nn"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ch82nn"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_STD17"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ch82nn'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_beb92/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_beb92.dir/build.make CMakeFiles/cmTC_beb92.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ch82nn'
+        Building CXX object CMakeFiles/cmTC_beb92.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_STD17  -std=c++17 -o CMakeFiles/cmTC_beb92.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ch82nn/src.cxx
+        Linking CXX executable cmTC_beb92
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_beb92.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_beb92.dir/src.cxx.o -o cmTC_beb92 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ch82nn'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:110 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WALL"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-rYycvi"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-rYycvi"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WALL"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-rYycvi'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_25a5c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_25a5c.dir/build.make CMakeFiles/cmTC_25a5c.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-rYycvi'
+        Building CXX object CMakeFiles/cmTC_25a5c.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WALL  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall   -Wall -o CMakeFiles/cmTC_25a5c.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-rYycvi/src.cxx
+        Linking CXX executable cmTC_25a5c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25a5c.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_25a5c.dir/src.cxx.o -o cmTC_25a5c 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-rYycvi'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:111 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WEXTRA"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-iGSwbd"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-iGSwbd"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WEXTRA"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-iGSwbd'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_94f46/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_94f46.dir/build.make CMakeFiles/cmTC_94f46.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-iGSwbd'
+        Building CXX object CMakeFiles/cmTC_94f46.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WEXTRA  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra   -Wextra -o CMakeFiles/cmTC_94f46.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-iGSwbd/src.cxx
+        Linking CXX executable cmTC_94f46
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94f46.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_94f46.dir/src.cxx.o -o cmTC_94f46 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-iGSwbd'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:114 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_FLTO_ODR_TYPE_MERGING"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-rX0K2M"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-rX0K2M"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_FLTO_ODR_TYPE_MERGING"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-rX0K2M'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_99639/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_99639.dir/build.make CMakeFiles/cmTC_99639.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-rX0K2M'
+        Building CXX object CMakeFiles/cmTC_99639.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_FLTO_ODR_TYPE_MERGING  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging   -flto-odr-type-merging -o CMakeFiles/cmTC_99639.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-rX0K2M/src.cxx
+        Linking CXX executable cmTC_99639
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99639.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_99639.dir/src.cxx.o -o cmTC_99639 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-rX0K2M'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:115 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_QUNUSED_ARGUMENTS"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-DZn5R3"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-DZn5R3"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_QUNUSED_ARGUMENTS"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-DZn5R3'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9b1ef/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9b1ef.dir/build.make CMakeFiles/cmTC_9b1ef.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-DZn5R3'
+        Building CXX object CMakeFiles/cmTC_9b1ef.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_QUNUSED_ARGUMENTS  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Qunused-arguments   -Qunused-arguments -o CMakeFiles/cmTC_9b1ef.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-DZn5R3/src.cxx
+        c++: error: unrecognized command-line option '-Qunused-arguments'
+        c++: error: unrecognized command-line option '-Qunused-arguments'
+        gmake[1]: *** [CMakeFiles/cmTC_9b1ef.dir/build.make:78: CMakeFiles/cmTC_9b1ef.dir/src.cxx.o] Error 1
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-DZn5R3'
+        gmake: *** [Makefile:127: cmTC_9b1ef/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:116 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WALLOC_ZERO"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-CPNv9b"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-CPNv9b"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WALLOC_ZERO"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-CPNv9b'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3e2cd/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3e2cd.dir/build.make CMakeFiles/cmTC_3e2cd.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-CPNv9b'
+        Building CXX object CMakeFiles/cmTC_3e2cd.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WALLOC_ZERO  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero   -Walloc-zero -o CMakeFiles/cmTC_3e2cd.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-CPNv9b/src.cxx
+        Linking CXX executable cmTC_3e2cd
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e2cd.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_3e2cd.dir/src.cxx.o -o cmTC_3e2cd 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-CPNv9b'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:117 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WCXX17_COMPAT_PEDANTIC"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-LsUUJJ"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-LsUUJJ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WCXX17_COMPAT_PEDANTIC"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-LsUUJJ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d0727/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d0727.dir/build.make CMakeFiles/cmTC_d0727.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-LsUUJJ'
+        Building CXX object CMakeFiles/cmTC_d0727.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WCXX17_COMPAT_PEDANTIC  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wc++17-compat-pedantic   -Wc++17-compat-pedantic -o CMakeFiles/cmTC_d0727.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-LsUUJJ/src.cxx
+        c++: error: unrecognized command-line option '-Wc++17-compat-pedantic'
+        c++: error: unrecognized command-line option '-Wc++17-compat-pedantic'
+        gmake[1]: *** [CMakeFiles/cmTC_d0727.dir/build.make:78: CMakeFiles/cmTC_d0727.dir/src.cxx.o] Error 1
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-LsUUJJ'
+        gmake: *** [Makefile:127: cmTC_d0727/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:118 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WCAST_QUAL"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-mjs0sY"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-mjs0sY"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WCAST_QUAL"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-mjs0sY'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9b2d0/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9b2d0.dir/build.make CMakeFiles/cmTC_9b2d0.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-mjs0sY'
+        Building CXX object CMakeFiles/cmTC_9b2d0.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WCAST_QUAL  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual   -Wcast-qual -o CMakeFiles/cmTC_9b2d0.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-mjs0sY/src.cxx
+        Linking CXX executable cmTC_9b2d0
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9b2d0.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_9b2d0.dir/src.cxx.o -o cmTC_9b2d0 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-mjs0sY'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:119 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WCONVERSION"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-F2yzng"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-F2yzng"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WCONVERSION"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-F2yzng'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e4f5d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e4f5d.dir/build.make CMakeFiles/cmTC_e4f5d.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-F2yzng'
+        Building CXX object CMakeFiles/cmTC_e4f5d.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WCONVERSION  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion   -Wconversion -o CMakeFiles/cmTC_e4f5d.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-F2yzng/src.cxx
+        Linking CXX executable cmTC_e4f5d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4f5d.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_e4f5d.dir/src.cxx.o -o cmTC_e4f5d 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-F2yzng'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:120 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WDEPRECATED"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-1GQ2bc"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-1GQ2bc"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WDEPRECATED"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-1GQ2bc'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a7d8d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a7d8d.dir/build.make CMakeFiles/cmTC_a7d8d.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-1GQ2bc'
+        Building CXX object CMakeFiles/cmTC_a7d8d.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WDEPRECATED  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated   -Wdeprecated -o CMakeFiles/cmTC_a7d8d.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-1GQ2bc/src.cxx
+        Linking CXX executable cmTC_a7d8d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7d8d.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_a7d8d.dir/src.cxx.o -o cmTC_a7d8d 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-1GQ2bc'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:121 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WDUPLICATED_BRANCHES"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ocrcEE"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ocrcEE"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WDUPLICATED_BRANCHES"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ocrcEE'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2ba7d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2ba7d.dir/build.make CMakeFiles/cmTC_2ba7d.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ocrcEE'
+        Building CXX object CMakeFiles/cmTC_2ba7d.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WDUPLICATED_BRANCHES  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches   -Wduplicated-branches -o CMakeFiles/cmTC_2ba7d.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ocrcEE/src.cxx
+        Linking CXX executable cmTC_2ba7d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ba7d.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_2ba7d.dir/src.cxx.o -o cmTC_2ba7d 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ocrcEE'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:122 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WDUPLICATED_COND"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-w25Ikl"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-w25Ikl"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WDUPLICATED_COND"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-w25Ikl'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_161c0/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_161c0.dir/build.make CMakeFiles/cmTC_161c0.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-w25Ikl'
+        Building CXX object CMakeFiles/cmTC_161c0.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WDUPLICATED_COND  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond   -Wduplicated-cond -o CMakeFiles/cmTC_161c0.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-w25Ikl/src.cxx
+        Linking CXX executable cmTC_161c0
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_161c0.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_161c0.dir/src.cxx.o -o cmTC_161c0 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-w25Ikl'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:123 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WIMPLICIT_FALLTHROUGH_2"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-vz3gpC"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-vz3gpC"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WIMPLICIT_FALLTHROUGH_2"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-vz3gpC'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_dd733/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_dd733.dir/build.make CMakeFiles/cmTC_dd733.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-vz3gpC'
+        Building CXX object CMakeFiles/cmTC_dd733.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WIMPLICIT_FALLTHROUGH_2  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2   -Wimplicit-fallthrough=2 -o CMakeFiles/cmTC_dd733.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-vz3gpC/src.cxx
+        Linking CXX executable cmTC_dd733
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dd733.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_dd733.dir/src.cxx.o -o cmTC_dd733 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-vz3gpC'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:124 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WLOGICAL_OP"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-DXx6RI"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-DXx6RI"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WLOGICAL_OP"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-DXx6RI'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8b9e0/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8b9e0.dir/build.make CMakeFiles/cmTC_8b9e0.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-DXx6RI'
+        Building CXX object CMakeFiles/cmTC_8b9e0.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WLOGICAL_OP  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op   -Wlogical-op -o CMakeFiles/cmTC_8b9e0.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-DXx6RI/src.cxx
+        Linking CXX executable cmTC_8b9e0
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b9e0.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_8b9e0.dir/src.cxx.o -o cmTC_8b9e0 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-DXx6RI'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:125 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WPSABI"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Eq9Du2"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Eq9Du2"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WPSABI"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Eq9Du2'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1e4c2/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1e4c2.dir/build.make CMakeFiles/cmTC_1e4c2.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Eq9Du2'
+        Building CXX object CMakeFiles/cmTC_1e4c2.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WPSABI  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi   -Wpsabi -o CMakeFiles/cmTC_1e4c2.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Eq9Du2/src.cxx
+        Linking CXX executable cmTC_1e4c2
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e4c2.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_1e4c2.dir/src.cxx.o -o cmTC_1e4c2 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Eq9Du2'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:126 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WSIGN_CONVERSION"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-T4xLn4"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-T4xLn4"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WSIGN_CONVERSION"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-T4xLn4'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7384a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7384a.dir/build.make CMakeFiles/cmTC_7384a.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-T4xLn4'
+        Building CXX object CMakeFiles/cmTC_7384a.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WSIGN_CONVERSION  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion   -Wsign-conversion -o CMakeFiles/cmTC_7384a.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-T4xLn4/src.cxx
+        Linking CXX executable cmTC_7384a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7384a.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_7384a.dir/src.cxx.o -o cmTC_7384a 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-T4xLn4'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:127 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WTAUTOLOGICAL_COMPARE"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-YS4sdT"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-YS4sdT"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WTAUTOLOGICAL_COMPARE"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-YS4sdT'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3bf1b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3bf1b.dir/build.make CMakeFiles/cmTC_3bf1b.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-YS4sdT'
+        Building CXX object CMakeFiles/cmTC_3bf1b.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WTAUTOLOGICAL_COMPARE  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare   -Wtautological-compare -o CMakeFiles/cmTC_3bf1b.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-YS4sdT/src.cxx
+        Linking CXX executable cmTC_3bf1b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3bf1b.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_3bf1b.dir/src.cxx.o -o cmTC_3bf1b 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-YS4sdT'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:128 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WUNKNOWN_WARNING_OPTION"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Pi6iMI"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Pi6iMI"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WUNKNOWN_WARNING_OPTION"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Pi6iMI'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c362c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c362c.dir/build.make CMakeFiles/cmTC_c362c.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Pi6iMI'
+        Building CXX object CMakeFiles/cmTC_c362c.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WUNKNOWN_WARNING_OPTION  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unknown-warning-option   -Wunknown-warning-option -o CMakeFiles/cmTC_c362c.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Pi6iMI/src.cxx
+        c++: error: unrecognized command-line option '-Wunknown-warning-option'
+        gmake[1]: *** [CMakeFiles/cmTC_c362c.dir/build.make:78: CMakeFiles/cmTC_c362c.dir/src.cxx.o] Error 1
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Pi6iMI'
+        gmake: *** [Makefile:127: cmTC_c362c/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:129 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WUNUSED_COMMAND_LINE_ARGUMENT"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-j22bQ6"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-j22bQ6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WUNUSED_COMMAND_LINE_ARGUMENT"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-j22bQ6'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e423f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e423f.dir/build.make CMakeFiles/cmTC_e423f.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-j22bQ6'
+        Building CXX object CMakeFiles/cmTC_e423f.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WUNUSED_COMMAND_LINE_ARGUMENT  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-command-line-argument   -Wunused-command-line-argument -o CMakeFiles/cmTC_e423f.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-j22bQ6/src.cxx
+        c++: error: unrecognized command-line option '-Wunused-command-line-argument'; did you mean '-Wunused-dummy-argument'?
+        gmake[1]: *** [CMakeFiles/cmTC_e423f.dir/build.make:78: CMakeFiles/cmTC_e423f.dir/src.cxx.o] Error 1
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-j22bQ6'
+        gmake: *** [Makefile:127: cmTC_e423f/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:130 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WUNUSED_PARAMETER"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-v38kGM"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-v38kGM"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WUNUSED_PARAMETER"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-v38kGM'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6f66b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6f66b.dir/build.make CMakeFiles/cmTC_6f66b.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-v38kGM'
+        Building CXX object CMakeFiles/cmTC_6f66b.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WUNUSED_PARAMETER  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter   -Wunused-parameter -o CMakeFiles/cmTC_6f66b.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-v38kGM/src.cxx
+        Linking CXX executable cmTC_6f66b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f66b.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_6f66b.dir/src.cxx.o -o cmTC_6f66b 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-v38kGM'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:131 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WNON_VIRTUAL_DTOR"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-PzeHny"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-PzeHny"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WNON_VIRTUAL_DTOR"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-PzeHny'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3ab1c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3ab1c.dir/build.make CMakeFiles/cmTC_3ab1c.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-PzeHny'
+        Building CXX object CMakeFiles/cmTC_3ab1c.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WNON_VIRTUAL_DTOR  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor   -Wnon-virtual-dtor -o CMakeFiles/cmTC_3ab1c.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-PzeHny/src.cxx
+        Linking CXX executable cmTC_3ab1c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ab1c.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_3ab1c.dir/src.cxx.o -o cmTC_3ab1c 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-PzeHny'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:132 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WODR"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-FXUBua"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-FXUBua"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WODR"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-FXUBua'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6a85c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6a85c.dir/build.make CMakeFiles/cmTC_6a85c.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-FXUBua'
+        Building CXX object CMakeFiles/cmTC_6a85c.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WODR  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr   -Wodr -o CMakeFiles/cmTC_6a85c.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-FXUBua/src.cxx
+        Linking CXX executable cmTC_6a85c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a85c.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_6a85c.dir/src.cxx.o -o cmTC_6a85c 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-FXUBua'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:133 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WPOINTER_ARITH"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-koCOa1"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-koCOa1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WPOINTER_ARITH"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-koCOa1'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3851d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3851d.dir/build.make CMakeFiles/cmTC_3851d.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-koCOa1'
+        Building CXX object CMakeFiles/cmTC_3851d.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WPOINTER_ARITH  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith   -Wpointer-arith -o CMakeFiles/cmTC_3851d.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-koCOa1/src.cxx
+        Linking CXX executable cmTC_3851d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3851d.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_3851d.dir/src.cxx.o -o cmTC_3851d 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-koCOa1'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:134 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WSIGN_COMPARE"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-To9KVX"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-To9KVX"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WSIGN_COMPARE"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-To9KVX'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1cd5c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1cd5c.dir/build.make CMakeFiles/cmTC_1cd5c.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-To9KVX'
+        Building CXX object CMakeFiles/cmTC_1cd5c.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WSIGN_COMPARE  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare   -Wsign-compare -o CMakeFiles/cmTC_1cd5c.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-To9KVX/src.cxx
+        Linking CXX executable cmTC_1cd5c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1cd5c.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_1cd5c.dir/src.cxx.o -o cmTC_1cd5c 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-To9KVX'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:135 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WUNUSED_MEMBER_FUNCTION"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-UiqAdd"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-UiqAdd"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WUNUSED_MEMBER_FUNCTION"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-UiqAdd'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0c745/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_0c745.dir/build.make CMakeFiles/cmTC_0c745.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-UiqAdd'
+        Building CXX object CMakeFiles/cmTC_0c745.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WUNUSED_MEMBER_FUNCTION  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wunused-member-function   -Wunused-member-function -o CMakeFiles/cmTC_0c745.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-UiqAdd/src.cxx
+        c++: error: unrecognized command-line option '-Wunused-member-function'; did you mean '-Wunused-function'?
+        c++: error: unrecognized command-line option '-Wunused-member-function'; did you mean '-Wunused-function'?
+        gmake[1]: *** [CMakeFiles/cmTC_0c745.dir/build.make:78: CMakeFiles/cmTC_0c745.dir/src.cxx.o] Error 1
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-UiqAdd'
+        gmake: *** [Makefile:127: cmTC_0c745/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:136 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WUNUSED_PRIVATE_FIELD"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ho8nKw"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ho8nKw"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WUNUSED_PRIVATE_FIELD"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ho8nKw'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3378e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3378e.dir/build.make CMakeFiles/cmTC_3378e.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ho8nKw'
+        Building CXX object CMakeFiles/cmTC_3378e.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WUNUSED_PRIVATE_FIELD  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wunused-private-field   -Wunused-private-field -o CMakeFiles/cmTC_3378e.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ho8nKw/src.cxx
+        c++: error: unrecognized command-line option '-Wunused-private-field'
+        c++: error: unrecognized command-line option '-Wunused-private-field'
+        gmake[1]: *** [CMakeFiles/cmTC_3378e.dir/build.make:78: CMakeFiles/cmTC_3378e.dir/src.cxx.o] Error 1
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ho8nKw'
+        gmake: *** [Makefile:127: cmTC_3378e/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:137 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WVLA"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-oWe2UE"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-oWe2UE"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WVLA"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-oWe2UE'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_52cc1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_52cc1.dir/build.make CMakeFiles/cmTC_52cc1.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-oWe2UE'
+        Building CXX object CMakeFiles/cmTC_52cc1.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WVLA  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla   -Wvla -o CMakeFiles/cmTC_52cc1.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-oWe2UE/src.cxx
+        Linking CXX executable cmTC_52cc1
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_52cc1.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_52cc1.dir/src.cxx.o -o cmTC_52cc1 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-oWe2UE'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:149 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WMAYBE_UNINITIALIZED"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-98nDml"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-98nDml"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WMAYBE_UNINITIALIZED"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-98nDml'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_56e69/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_56e69.dir/build.make CMakeFiles/cmTC_56e69.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-98nDml'
+        Building CXX object CMakeFiles/cmTC_56e69.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WMAYBE_UNINITIALIZED  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized   -Wmaybe-uninitialized -o CMakeFiles/cmTC_56e69.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-98nDml/src.cxx
+        Linking CXX executable cmTC_56e69
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56e69.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_56e69.dir/src.cxx.o -o cmTC_56e69 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-98nDml'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:159 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WREDUNDANT_MOVE"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Kaslxj"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Kaslxj"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WREDUNDANT_MOVE"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Kaslxj'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f401d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f401d.dir/build.make CMakeFiles/cmTC_f401d.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Kaslxj'
+        Building CXX object CMakeFiles/cmTC_f401d.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WREDUNDANT_MOVE  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move   -Wredundant-move -o CMakeFiles/cmTC_f401d.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Kaslxj/src.cxx
+        Linking CXX executable cmTC_f401d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f401d.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_f401d.dir/src.cxx.o -o cmTC_f401d 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-Kaslxj'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "td/CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "td/CMake/TdSetUpCompiler.cmake:162 (add_cxx_compiler_flag)"
+      - "td/CMakeLists.txt:113 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WSTRINGOP_OVERFLOW"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-wczEC6"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-wczEC6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WSTRINGOP_OVERFLOW"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-wczEC6'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_eb28e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_eb28e.dir/build.make CMakeFiles/cmTC_eb28e.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-wczEC6'
+        Building CXX object CMakeFiles/cmTC_eb28e.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WSTRINGOP_OVERFLOW  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move -Wno-stringop-overflow   -Wstringop-overflow -o CMakeFiles/cmTC_eb28e.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-wczEC6/src.cxx
+        Linking CXX executable cmTC_eb28e
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb28e.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move -Wno-stringop-overflow  -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_eb28e.dir/src.cxx.o -o cmTC_eb28e 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-wczEC6'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "td/CMake/FindAtomics.cmake:43 (check_cxx_source_compiles)"
+      - "td/tdutils/CMakeLists.txt:409 (find_package)"
+    checks:
+      - "Performing Test ATOMICS_FOUND"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ILVbEh"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ILVbEh"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move -Wno-stringop-overflow"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "ATOMICS_FOUND"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ILVbEh'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_efdac/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_efdac.dir/build.make CMakeFiles/cmTC_efdac.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ILVbEh'
+        Building CXX object CMakeFiles/cmTC_efdac.dir/src.cxx.o
+        /usr/bin/c++ -DATOMICS_FOUND  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move -Wno-stringop-overflow  -fPIE -o CMakeFiles/cmTC_efdac.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ILVbEh/src.cxx
+        Linking CXX executable cmTC_efdac
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_efdac.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move -Wno-stringop-overflow   -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_efdac.dir/src.cxx.o -o cmTC_efdac 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-ILVbEh'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCompilerFlag.cmake:52 (cmake_check_compiler_flag)"
+      - "/usr/share/cmake-3.28/Modules/GenerateExportHeader.cmake:238 (check_compiler_flag)"
+      - "/usr/share/cmake-3.28/Modules/GenerateExportHeader.cmake:419 (_test_compiler_hidden_visibility)"
+      - "td/CMakeLists.txt:1383 (generate_export_header)"
+    checks:
+      - "Performing Test COMPILER_HAS_HIDDEN_VISIBILITY"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-5Wy6uS"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-5Wy6uS"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move -Wno-stringop-overflow"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "COMPILER_HAS_HIDDEN_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-5Wy6uS'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_45144/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_45144.dir/build.make CMakeFiles/cmTC_45144.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-5Wy6uS'
+        Building CXX object CMakeFiles/cmTC_45144.dir/src.cxx.o
+        /usr/bin/c++ -DCOMPILER_HAS_HIDDEN_VISIBILITY  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move -Wno-stringop-overflow  -fPIE   -fvisibility=hidden -o CMakeFiles/cmTC_45144.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-5Wy6uS/src.cxx
+        Linking CXX executable cmTC_45144
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45144.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move -Wno-stringop-overflow   -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_45144.dir/src.cxx.o -o cmTC_45144 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-5Wy6uS'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCompilerFlag.cmake:52 (cmake_check_compiler_flag)"
+      - "/usr/share/cmake-3.28/Modules/GenerateExportHeader.cmake:239 (check_compiler_flag)"
+      - "/usr/share/cmake-3.28/Modules/GenerateExportHeader.cmake:419 (_test_compiler_hidden_visibility)"
+      - "td/CMakeLists.txt:1383 (generate_export_header)"
+    checks:
+      - "Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-bSJoJF"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-bSJoJF"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move -Wno-stringop-overflow"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "COMPILER_HAS_HIDDEN_INLINE_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-bSJoJF'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9d253/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9d253.dir/build.make CMakeFiles/cmTC_9d253.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-bSJoJF'
+        Building CXX object CMakeFiles/cmTC_9d253.dir/src.cxx.o
+        /usr/bin/c++ -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move -Wno-stringop-overflow  -fPIE   -fvisibility-inlines-hidden -o CMakeFiles/cmTC_9d253.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-bSJoJF/src.cxx
+        Linking CXX executable cmTC_9d253
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d253.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move -Wno-stringop-overflow   -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_9d253.dir/src.cxx.o -o cmTC_9d253 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-bSJoJF'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSourceCompiles.cmake:77 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/GenerateExportHeader.cmake:206 (check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/GenerateExportHeader.cmake:263 (_check_cxx_compiler_attribute)"
+      - "/usr/share/cmake-3.28/Modules/GenerateExportHeader.cmake:420 (_test_compiler_has_deprecated)"
+      - "td/CMakeLists.txt:1383 (generate_export_header)"
+    checks:
+      - "Performing Test COMPILER_HAS_DEPRECATED_ATTR"
+    directories:
+      source: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-MiO1KX"
+      binary: "/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-MiO1KX"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move -Wno-stringop-overflow"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections -Wl,--exclude-libs,ALL"
+      CMAKE_MODULE_PATH: "/workspace/telegram-bot-api/td/CMake;"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "COMPILER_HAS_DEPRECATED_ATTR"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-MiO1KX'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9239f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9239f.dir/build.make CMakeFiles/cmTC_9239f.dir/build
+        gmake[1]: Entering directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-MiO1KX'
+        Building CXX object CMakeFiles/cmTC_9239f.dir/src.cxx.o
+        /usr/bin/c++ -DCOMPILER_HAS_DEPRECATED_ATTR  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move -Wno-stringop-overflow  -fPIE -o CMakeFiles/cmTC_9239f.dir/src.cxx.o -c /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-MiO1KX/src.cxx
+        /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-MiO1KX/src.cxx: In function ‘int main()’:
+        /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-MiO1KX/src.cxx:2:33: warning: ‘int somefunc()’ is deprecated [-Wdeprecated-declarations]
+            2 |     int main() { return somefunc();}
+              |                         ~~~~~~~~^~
+        /workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-MiO1KX/src.cxx:1:37: note: declared here
+            1 | __attribute__((__deprecated__)) int somefunc() { return 0; }
+              |                                     ^~~~~~~~
+        Linking CXX executable cmTC_9239f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9239f.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++17 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -flto-odr-type-merging -Walloc-zero -Wcast-qual -Wconversion -Wdeprecated -Wduplicated-branches -Wduplicated-cond -Wimplicit-fallthrough=2 -Wlogical-op -Wno-psabi -Wno-sign-conversion -Wno-tautological-compare -Wno-unused-parameter -Wnon-virtual-dtor -Wodr -Wpointer-arith -Wsign-compare -Wvla -Wno-maybe-uninitialized -Wno-redundant-move -Wno-stringop-overflow   -Wl,--gc-sections -Wl,--exclude-libs,ALL  CMakeFiles/cmTC_9239f.dir/src.cxx.o -o cmTC_9239f 
+        gmake[1]: Leaving directory '/workspace/telegram-bot-api/build/CMakeFiles/CMakeScratch/TryCompile-MiO1KX'
+        
+      exitCode: 0
+...

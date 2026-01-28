@@ -213,10 +213,45 @@ echo ">>> Downloading .env file..."
 mkdir -p /workspace/yappi-sinc
 curl -L "https://www.dropbox.com/scl/fi/oc46q1jah59zn6dk8i3k5/.env?rlkey=mbdm7c2yja7vcmjqisg4phxd3&st=r5lu9mld&dl=1" -o /workspace/yappi-sinc/.env
 
+# -------------------------
+# TELEGRAM BOT API LOCAL SERVER
+# -------------------------
+echo "==============================================="
+echo " STARTING TELEGRAM BOT API SERVER"
+echo "==============================================="
+
+# Убиваем старый процесс если есть
+pkill -f telegram-bot-api 2>/dev/null || true
+
+# Проверяем наличие бинарника
+if [ ! -f "/workspace/yappi-sinc/telegram-bot-api/build/telegram-bot-api" ]; then
+    echo "[ERROR] telegram-bot-api binary not found!"
+    echo "[INFO] Please build it first"
+    exit 1
+fi
+
+# Запускаем сервер
+echo ">>> Starting Telegram Bot API Server on port 8765..."
+cd /workspace/yappi-sinc/telegram-bot-api/build
+nohup ./telegram-bot-api --api-id=23284006 --api-hash=fa0e6f9ab220d4edc4f71fd022717baa --local -p 8765 > /workspace/telegram-bot-api.log 2>&1 &
+
+# Ждем запуска
+sleep 3
+
+# Проверяем что запустился
+if curl -s http://127.0.0.1:8765 > /dev/null 2>&1; then
+    echo " [OK] Telegram Bot API Server is running on port 8765"
+else
+    echo " [ERROR] Failed to start Telegram Bot API Server"
+fi
+
+echo "==============================================="
+echo " STARTING TELEGRAM BOT"
+echo "==============================================="
+
 # 2. Запуск бота из виртуального окружения (текущий сеанс)
 echo ">>> Starting Telegram Bot..."
 cd /workspace/yappi-sinc
-# Используем полный путь к venv, созданному в начале скрипта
 ./venv/bin/python3 bot.py > bot.log 2>&1 &
 
 # 3. Модификация системного entrypoint.sh для автозапуска при рестарте инстанса

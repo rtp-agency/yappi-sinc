@@ -130,7 +130,6 @@ echo "==============================================="
 # Список репозиториев
 REPOS=(
     "https://github.com/Kijai/ComfyUI-WanVideoWrapper.git"
-    "https://github.com/kijai/ComfyUI-KJNodes.git"
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"
     "https://github.com/Kijai/ComfyUI-MelBandRoFormer.git"
     "https://github.com/ltdrdata/ComfyUI-Manager.git"
@@ -149,6 +148,21 @@ for repo in "${REPOS[@]}"; do
         cd "$folder" && git pull && cd ..
     fi
 done
+
+folder="ComfyUI-KJNodes"
+if [ ! -d "$folder" ]; then
+    echo ">>> Cloning $folder..."
+    git clone https://github.com/kijai/ComfyUI-KJNodes.git
+    cd "$folder"
+    git checkout 484a12e49afe717882f2f531961780c64caadcd2
+    cd ..
+else
+    echo ">>> $folder already exists, pinning to known good commit..."
+    cd "$folder"
+    git fetch origin
+    git checkout 484a12e49afe717882f2f531961780c64caadcd2
+    cd ..
+fi
 
 echo "-----------------------------------------------"
 echo "INSTALLING DEPENDENCIES"

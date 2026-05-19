@@ -134,7 +134,10 @@ REPOS=(
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"
     "https://github.com/Kijai/ComfyUI-MelBandRoFormer.git"
     "https://github.com/ltdrdata/ComfyUI-Manager.git"
+    "https://github.com/kijai/ComfyUI-KJNodes.git"
+    "https://github.com/aining2022/ComfyUI_Swwan.git"
 )
+
 
 # 1. Клонирование репозиториев
 for repo in "${REPOS[@]}"; do

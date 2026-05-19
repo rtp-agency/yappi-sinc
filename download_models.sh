@@ -130,11 +130,10 @@ echo "==============================================="
 # Список репозиториев
 REPOS=(
     "https://github.com/Kijai/ComfyUI-WanVideoWrapper.git"
-    "https://github.com/Kijai/ComfyUI-KJNodes.git"
+    "https://github.com/kijai/ComfyUI-KJNodes.git"
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"
     "https://github.com/Kijai/ComfyUI-MelBandRoFormer.git"
     "https://github.com/ltdrdata/ComfyUI-Manager.git"
-    "https://github.com/kijai/ComfyUI-KJNodes.git"
     "https://github.com/aining2022/ComfyUI_Swwan.git"
 )
 
